@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+opencv-python
+openai
+python-dotenv
+numpy
+scikit-learn
+requests
+soundfile
+tqdm
+python-multipart
+torch
+torchvision
+pillow
+open_clip_torch
+requests
+ffmpeg-python
