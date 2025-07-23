@@ -6,6 +6,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 import uvicorn
 import sys
 import traceback
+import os
 from contextlib import asynccontextmanager
 
 from api.endpoints import router
@@ -184,10 +185,8 @@ if __name__ == "__main__":
     print(f"🌐 Debug mode: {settings.DEBUG}")
     
     uvicorn.run(
-        "main:app",
-        host=settings.HOST,
-        port=settings.PORT,
-        reload=settings.DEBUG,
-        log_level="info" if settings.DEBUG else "warning",
-        access_log=settings.DEBUG
+    "main:app",
+    host="0.0.0.0",
+    port=int(os.environ.get("PORT", 8000)),
+    reload=False
     )
