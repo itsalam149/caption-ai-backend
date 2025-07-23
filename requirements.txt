@@ -13,5 +13,4 @@ torch
 torchvision
 pillow
 open_clip_torch
-requests
 ffmpeg-python
